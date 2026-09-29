@@ -1,6 +1,6 @@
 cask "macremote" do
-  version "0.1.1"
-  sha256 "9f4aff6d4b7fcfdfcf6aac92c0104cc1ea06d4c7346e47b386e813556bd2eb93"
+  version "0.2.0"
+  sha256 "61008d8b3ded13200337d564f6730c42185f2e5a2d1002fa5b0e133790ba0838"
 
   url "https://github.com/vdmytriuk/macremote/releases/download/v#{version}/MacRemote.dmg"
   name "MacRemote"
