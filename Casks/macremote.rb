@@ -18,8 +18,11 @@ cask "macremote" do
   ]
 
   caveats <<~EOS
-    The app is not notarized. Install with --no-quarantine to avoid the macOS warning:
-      brew install --cask --no-quarantine vdmytriuk/tap/macremote
+    Homebrew always quarantines casks, so macOS shows a "Not Opened" warning on first launch.
+    Clear it once after installing:
+      xattr -dr com.apple.quarantine /Applications/MacRemote.app
+    Or install without any warnings with the one-line installer from the site:
+      curl -fsSL https://vdmytriuk.github.io/macremote/install.sh | bash
     Then grant Accessibility when macOS asks, and open the QR code from the menu bar icon.
   EOS
 end
